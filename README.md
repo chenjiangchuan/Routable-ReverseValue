@@ -1,2 +1,5 @@
 # Routable-ReverseValue
-iOS项目中使用Routable解决控制器之间逆向传值问题
+
+说明请转到[使用Routable后的思考](http://oriochan.com/aboutRoutable.html)
+
+
