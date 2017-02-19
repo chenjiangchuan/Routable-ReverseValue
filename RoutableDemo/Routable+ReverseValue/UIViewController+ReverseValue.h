@@ -12,6 +12,6 @@
 @interface UIViewController (ReverseValue) <ReverseValueProtocol>
 
 /** ReverseValueProtocol */
-@property (strong, nonatomic) id<ReverseValueProtocol> delegate;
+@property (weak, nonatomic) id<ReverseValueProtocol> delegate;
 
 @end
