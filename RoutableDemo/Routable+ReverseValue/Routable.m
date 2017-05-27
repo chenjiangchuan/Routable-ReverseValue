@@ -257,11 +257,11 @@
     animated:(BOOL)animated
  extraParams:(NSDictionary *)extraParams
 {
-    [self open:url animated:animated extraParams:extraParams reverseValueProtocol:NO withViewController:nil];
+    [self open:url animated:animated extraParams:extraParams delegateObject:nil];
 }
 
 // add by cjc
-- (void)open:(NSString *)url animated:(BOOL)animated extraParams:(NSDictionary *)extraParams reverseValueProtocol:(BOOL)reverseValue withViewController:(UIViewController *)viewController {
+- (void)open:(NSString *)url animated:(BOOL)animated extraParams:(NSDictionary *)extraParams  delegateObject:(id)delegateObject {
     
     RouterParams *params = [self routerParamsForUrl:url extraParams: extraParams];
     UPRouterOptions *options = params.routerOptions;
@@ -285,9 +285,10 @@
     UIViewController *controller = [self controllerForRouterParams:params];
     
     // add by cjc
-    if (reverseValue) {
-        controller.delegate = viewController;
-    }
+    if (delegateObject &&
+        [delegateObject conformsToProtocol:@protocol(JCReverseValueProtocol)]) {
+        controller.JCReverseValueDelegate = delegateObject;
+    }// end
     
     if (self.navigationController.presentedViewController) {
         [self.navigationController dismissViewControllerAnimated:animated completion:nil];

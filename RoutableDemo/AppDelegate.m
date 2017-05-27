@@ -22,15 +22,19 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
  
+    // 1
     [[Routable sharedRouter] map:@"SecondViewController" toController:[SecondViewController class]];
     [[Routable sharedRouter] map:@"ViewController" toController:[ViewController class]];
     
+    // 2
     UINavigationController *nc = [[UINavigationController alloc] init];
     [[Routable sharedRouter] setNavigationController:nc];
     
+    // 3
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
     
+    // 4
     [[Routable sharedRouter] open:@"ViewController"];
     
     return YES;

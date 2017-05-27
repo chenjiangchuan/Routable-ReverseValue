@@ -9,14 +9,16 @@
 #import "UIViewController+ReverseValue.h"
 #import <objc/runtime.h>
 
+const static void *JCReverseValueDelegateKey = &JCReverseValueDelegateKey;
+
 @implementation UIViewController (ReverseValue)
 
-- (id<ReverseValueProtocol>)delegate {
-    return objc_getAssociatedObject(self, @selector(delegate));
+- (id<JCReverseValueProtocol>)JCReverseValueDelegate {
+    return objc_getAssociatedObject(self, JCReverseValueDelegateKey);
 }
 
-- (void)setDelegate:(id<ReverseValueProtocol>)delegate {
-    objc_setAssociatedObject(self, @selector(delegate), delegate, OBJC_ASSOCIATION_ASSIGN);
+- (void)setJCReverseValueDelegate:(id<JCReverseValueProtocol>)JCReverseValueDelegate {
+    objc_setAssociatedObject(self, JCReverseValueDelegateKey, JCReverseValueDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
 @end

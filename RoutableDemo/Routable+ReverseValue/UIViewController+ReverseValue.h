@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ReverseValueProtocol.h"
+#import "JCReverseValueProtocol.h"
 
-@interface UIViewController (ReverseValue) <ReverseValueProtocol>
+@interface UIViewController (ReverseValue) <JCReverseValueProtocol>
 
 /** ReverseValueProtocol */
-@property (weak, nonatomic) id<ReverseValueProtocol> delegate;
+@property (weak, nonatomic) id<JCReverseValueProtocol> JCReverseValueDelegate;
 
 @end

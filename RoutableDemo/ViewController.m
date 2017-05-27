@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "Routable.h"
+#import "JCView.h"
 
 @interface ViewController ()
 
 /** button */
 @property (strong, nonatomic) UIButton *button;
+/** JCView */
+@property (strong, nonatomic) JCView *jcView;
 
 @end
 
@@ -35,18 +38,30 @@
     [_button setTitle:@"clike me" forState:UIControlStateNormal];
     [_button setFrame:CGRectMake(50, 50, 100, 50)];
     [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_button];
+//    [self.view addSubview:_button];
+    [self.view addSubview:self.jcView];
+    self.jcView.frame = CGRectMake(50, 50, 100, 50);
+}
+
+- (JCView *)jcView {
+    if (_jcView == nil) {
+        _jcView = [[JCView alloc] init];
+    }
+    return _jcView;
 }
 
 #pragma mark - Target Action
 
 - (void)buttonClick {
-    [[Routable sharedRouter] open:@"SecondViewController" animated:YES extraParams:@{@"title" : @"come from ViewController"} reverseValueProtocol:YES withViewController:self];
+    [[Routable sharedRouter] open:@"SecondViewController"
+                         animated:YES
+                      extraParams:@{@"title" : @"come from ViewController"}
+                   delegateObject:self];
 }
 
 #pragma mark - ReverseValueProtocol
 
-- (void)reverseValue:(id)value {
+- (void)jc_reverseValue:(id)value {
     NSLog(@"%s:%@", __FUNCTION__, value);
 }
 

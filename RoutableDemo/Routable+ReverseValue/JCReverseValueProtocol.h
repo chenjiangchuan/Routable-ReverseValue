@@ -10,9 +10,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ReverseValueProtocol <NSObject>
+@protocol JCReverseValueProtocol <NSObject>
 
 @optional
-- (void)reverseValue:(id)value;
+- (void)jc_reverseValue:(id)value;
 
 @end

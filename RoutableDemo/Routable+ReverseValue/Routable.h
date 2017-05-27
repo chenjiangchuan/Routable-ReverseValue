@@ -349,11 +349,8 @@ typedef void (^RouterOpenCallback)(NSDictionary *params);
  *  @author chenjiangchuan, 17-02-17 22:02:02
  *
  *  添加这个方法主要是为了控制器之间数据的逆向传递
- *
- *  @param reverseValue   是否允许数据逆向传递
- *  @param viewController 当前显示的控制器
  */
-- (void)open:(NSString *)url animated:(BOOL)animated extraParams:(NSDictionary *)extraParams reverseValueProtocol:(BOOL)reverseValue withViewController:(UIViewController *)viewController;
+- (void)open:(NSString *)url animated:(BOOL)animated extraParams:(NSDictionary *)extraParams  delegateObject:(id)delegateObject;
 
 /**
  Get params of a given URL, simply return the params dictionary NOT using a block

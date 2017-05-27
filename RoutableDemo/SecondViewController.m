@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import "Routable.h"
 
-@interface SecondViewController () <ReverseValueProtocol>
+@interface SecondViewController () 
 
 /** button */
 @property (strong, nonatomic) UIButton *button;
@@ -42,8 +42,8 @@
 
 - (void)buttonClick {
     // 需要逆向传递数据
-    if ([self.delegate respondsToSelector:@selector(reverseValue:)]) {
-        [self.delegate reverseValue:@"come from SecondViewController"];
+    if ([self.JCReverseValueDelegate respondsToSelector:@selector(jc_reverseValue:)]) {
+        [self.JCReverseValueDelegate jc_reverseValue:@"come from SecondViewController"];
     }
 }
 
