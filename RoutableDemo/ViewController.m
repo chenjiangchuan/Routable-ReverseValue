@@ -21,48 +21,41 @@
 
 @implementation ViewController
 
+#pragma mark - Routable Init
+
 - (id)initWithRouterParams:(NSDictionary *)params {
     if ((self = [self initWithNibName:nil bundle:nil])) {
-        
+        NSLog(@"%s, params = %@", __FUNCTION__, params);
     }
     return self;
 }
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.view setBackgroundColor:[UIColor orangeColor]];
+    self.navigationItem.title = @"第一个控制器";
     
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_button setTitle:@"clike me" forState:UIControlStateNormal];
-    [_button setFrame:CGRectMake(50, 50, 100, 50)];
-    [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:_button];
+    [self.view setBackgroundColor:[UIColor orangeColor]];
     [self.view addSubview:self.jcView];
-    self.jcView.frame = CGRectMake(50, 50, 100, 50);
-}
-
-- (JCView *)jcView {
-    if (_jcView == nil) {
-        _jcView = [[JCView alloc] init];
-    }
-    return _jcView;
-}
-
-#pragma mark - Target Action
-
-- (void)buttonClick {
-    [[Routable sharedRouter] open:@"SecondViewController"
-                         animated:YES
-                      extraParams:@{@"title" : @"come from ViewController"}
-                   delegateObject:self];
+    self.jcView.frame = CGRectMake(50, 100, 300, 50);
 }
 
 #pragma mark - ReverseValueProtocol
 
 - (void)jc_reverseValue:(id)value {
     NSLog(@"%s:%@", __FUNCTION__, value);
+}
+
+#pragma mark - Lazy Initialze
+
+- (JCView *)jcView {
+    if (_jcView == nil) {
+        _jcView = [[JCView alloc] init];
+    }
+    return _jcView;
 }
 
 @end

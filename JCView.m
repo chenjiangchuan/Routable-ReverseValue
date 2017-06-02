@@ -31,7 +31,7 @@
 }
 
 - (void)buttonAction {
-    [[Routable sharedRouter] open:@"SecondViewController"
+    [[Routable sharedRouter] open:@"ThirdViewController"
                          animated:YES
                       extraParams:@{@"title" : @"come from ViewController"}
                    delegateObject:self];

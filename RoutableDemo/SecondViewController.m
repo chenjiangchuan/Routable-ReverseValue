@@ -7,12 +7,8 @@
 //
 
 #import "SecondViewController.h"
-#import "Routable.h"
 
 @interface SecondViewController () 
-
-/** button */
-@property (strong, nonatomic) UIButton *button;
 
 @end
 
@@ -31,20 +27,7 @@
     
     [self.view setBackgroundColor:[UIColor redColor]];
     
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_button setTitle:@"clike me" forState:UIControlStateNormal];
-    [_button setFrame:CGRectMake(100, 50, 100, 50)];
-    [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_button];
-}
-
-#pragma mark - Target Action
-
-- (void)buttonClick {
-    // 需要逆向传递数据
-    if ([self.JCReverseValueDelegate respondsToSelector:@selector(jc_reverseValue:)]) {
-        [self.JCReverseValueDelegate jc_reverseValue:@"come from SecondViewController"];
-    }
+    self.navigationItem.title = @"第二个控制器";
 }
 
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D65520E01E5745F8008FB5B9 /* Routable.m in Sources */ = {isa = PBXBuildFile; fileRef = D65520DD1E5745F8008FB5B9 /* Routable.m */; };
 		D65520E11E5745F8008FB5B9 /* UIViewController+ReverseValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D65520DF1E5745F8008FB5B9 /* UIViewController+ReverseValue.m */; };
+		D658DF151EE1064A002E832D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D658DF141EE1064A002E832D /* ThirdViewController.m */; };
+		D6C5B4E91EE00C7C00834E27 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C5B4E81EE00C7C00834E27 /* TabBarController.m */; };
 		D6CEF4511E572BA400CA6F7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF4501E572BA400CA6F7B /* main.m */; };
 		D6CEF4541E572BA400CA6F7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF4531E572BA400CA6F7B /* AppDelegate.m */; };
 		D6CEF4571E572BA400CA6F7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF4561E572BA400CA6F7B /* ViewController.m */; };
@@ -23,7 +25,11 @@
 		D65520DD1E5745F8008FB5B9 /* Routable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Routable.m; sourceTree = "<group>"; };
 		D65520DE1E5745F8008FB5B9 /* UIViewController+ReverseValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ReverseValue.h"; sourceTree = "<group>"; };
 		D65520DF1E5745F8008FB5B9 /* UIViewController+ReverseValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ReverseValue.m"; sourceTree = "<group>"; };
+		D658DF131EE1064A002E832D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		D658DF141EE1064A002E832D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		D6BEF5A41ED948D2007E02E3 /* JCReverseValueProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCReverseValueProtocol.h; sourceTree = "<group>"; };
+		D6C5B4E71EE00C7C00834E27 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		D6C5B4E81EE00C7C00834E27 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		D6CEF44C1E572BA400CA6F7B /* RoutableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CEF4501E572BA400CA6F7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6CEF4521E572BA400CA6F7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,10 +92,14 @@
 				D65520DA1E5745F8008FB5B9 /* Routable+ReverseValue */,
 				D6CEF4521E572BA400CA6F7B /* AppDelegate.h */,
 				D6CEF4531E572BA400CA6F7B /* AppDelegate.m */,
+				D6C5B4E71EE00C7C00834E27 /* TabBarController.h */,
+				D6C5B4E81EE00C7C00834E27 /* TabBarController.m */,
 				D6CEF4551E572BA400CA6F7B /* ViewController.h */,
 				D6CEF4561E572BA400CA6F7B /* ViewController.m */,
 				D6CEF46A1E572C2100CA6F7B /* SecondViewController.h */,
 				D6CEF46B1E572C2100CA6F7B /* SecondViewController.m */,
+				D658DF131EE1064A002E832D /* ThirdViewController.h */,
+				D658DF141EE1064A002E832D /* ThirdViewController.m */,
 				D6CEF45B1E572BA400CA6F7B /* Assets.xcassets */,
 				D6CEF45D1E572BA400CA6F7B /* LaunchScreen.storyboard */,
 				D6CEF4601E572BA400CA6F7B /* Info.plist */,
@@ -182,8 +192,10 @@
 				D65520E11E5745F8008FB5B9 /* UIViewController+ReverseValue.m in Sources */,
 				D6CEF4571E572BA400CA6F7B /* ViewController.m in Sources */,
 				D6CEF4541E572BA400CA6F7B /* AppDelegate.m in Sources */,
+				D658DF151EE1064A002E832D /* ThirdViewController.m in Sources */,
 				D65520E01E5745F8008FB5B9 /* Routable.m in Sources */,
 				D6CEF4511E572BA400CA6F7B /* main.m in Sources */,
+				D6C5B4E91EE00C7C00834E27 /* TabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
