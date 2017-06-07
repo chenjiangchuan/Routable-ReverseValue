@@ -31,16 +31,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor yellowColor]];
-    
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_button setTitle:@"clike me" forState:UIControlStateNormal];
-    [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_button setFrame:CGRectMake(100, 100, 100, 50)];
-    [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_button];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:self.button];
+    [self layoutPageSubviews];
 }
 
+- (void)layoutPageSubviews {
+    [self.button setFrame:CGRectMake(100, 100, 100, 50)];
+}
 
 #pragma mark - Target Action
 
@@ -49,6 +47,18 @@
     if ([self.JCReverseValueDelegate respondsToSelector:@selector(jc_reverseValue:)]) {
         [self.JCReverseValueDelegate jc_reverseValue:@"come from ThirdViewController"];
     }
+}
+
+#pragma mark - Lazy Initialze
+
+- (UIButton *)button {
+    if (_button == nil) {
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_button setTitle:@"clike me" forState:UIControlStateNormal];
+        [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _button;
 }
 
 @end

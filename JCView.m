@@ -7,6 +7,8 @@
 //
 
 #import "JCView.h"
+#include <libkern/OSAtomic.h>
+#include <execinfo.h>
 
 @interface JCView ()
 

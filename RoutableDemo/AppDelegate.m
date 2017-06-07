@@ -27,19 +27,11 @@
     // 1
     [[Routable sharedRouter] map:@"SecondViewController" toController:[SecondViewController class]];
     [[Routable sharedRouter] map:@"ViewController" toController:[ViewController class]];
-    [[Routable sharedRouter] map:@"TabBarController" toController:[TabBarController class]];
     [[Routable sharedRouter] map:@"ThirdViewController" toController:[ThirdViewController class]];
     
     // 2
-    UINavigationController *nc = [[UINavigationController alloc] init];
-    [[Routable sharedRouter] setNavigationController:nc];
-    NSLog(@"nc = %@", nc);
-    // 3
-    self.window.rootViewController = nc;
+    self.window.rootViewController = [[TabBarController alloc] init];
     [self.window makeKeyAndVisible];
-    
-    // 4
-    [[Routable sharedRouter] open:@"TabBarController"];
     
     return YES;
 }

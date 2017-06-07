@@ -25,7 +25,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "UIViewController+ReverseValue.h"
+#import "NSObject+ReverseValue.h"
+#import "UIViewController+Utils.h"
 
 @class UPRouter;
 

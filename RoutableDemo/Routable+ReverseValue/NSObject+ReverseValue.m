@@ -1,17 +1,17 @@
 //
-//  UIViewController+ReverseValue.m
-//  Routable
+//  NSObject+ReverseValue.m
+//  RoutableDemo
 //
-//  Created by chenjiangchuan on 2017/2/17.
+//  Created by chenjiangchuan on 2017/6/7.
 //  Copyright © 2017年 chenjiangchuan. All rights reserved.
 //
 
-#import "UIViewController+ReverseValue.h"
+#import "NSObject+ReverseValue.h"
 #import <objc/runtime.h>
 
 const static void *JCReverseValueDelegateKey = &JCReverseValueDelegateKey;
 
-@implementation UIViewController (ReverseValue)
+@implementation NSObject (ReverseValue)
 
 - (id<JCReverseValueProtocol>)JCReverseValueDelegate {
     return objc_getAssociatedObject(self, JCReverseValueDelegateKey);

@@ -263,6 +263,16 @@
 // add by cjc
 - (void)open:(NSString *)url animated:(BOOL)animated extraParams:(NSDictionary *)extraParams  delegateObject:(id)delegateObject {
     
+    // 处理navigationController
+    UIViewController *currentController = [UIViewController currentViewController];
+    if ([currentController isKindOfClass:[UIViewController class]]) {
+        self.navigationController = currentController.navigationController;
+    } else if ([currentController isKindOfClass:[UINavigationController class]]) {
+        self.navigationController = (UINavigationController *)currentController;
+    } else {
+        self.navigationController = [[UINavigationController alloc] init];
+    }
+    
     RouterParams *params = [self routerParamsForUrl:url extraParams: extraParams];
     UPRouterOptions *options = params.routerOptions;
     

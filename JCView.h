@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Routable.h"
 
-@interface JCView : UIView <JCReverseValueProtocol>
+@interface JCView : UIView
 
 @end
