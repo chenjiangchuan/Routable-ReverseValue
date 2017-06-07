@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSObject+ReverseValue.h"
 
 @interface SecondViewController : UIViewController
 
