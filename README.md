@@ -87,6 +87,8 @@ Routable-ReverseValue是基于Routable框架添加了几个新的功能。
     
     这样ViewController1跳转ViewController2，则由NavigationController1负责；反过来ViewController2跳转ViewController1，则由NavigationController2负责。
 
+    所有Routable-ReverseValue不需要手动配置Routable.navigationController，它会根据当前所在的Controller做对应的处理。
+
 2. 逆向传值
 
     添加了NSObject+ReverseValue分类，然后在该分类中添加遵守JCReverseValueProtocol协议的属性，只要*#import "Routable.h"*即可。
