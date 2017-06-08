@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.title = @"第一个控制器";
-    
+
     [self.view setBackgroundColor:[UIColor orangeColor]];
     [self.view addSubview:self.jcView];
     self.jcView.frame = CGRectMake(50, 100, 300, 50);

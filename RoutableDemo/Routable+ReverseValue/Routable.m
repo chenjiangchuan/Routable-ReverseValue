@@ -266,7 +266,11 @@
     // 处理navigationController
     UIViewController *currentController = [UIViewController currentViewController];
     if ([currentController isKindOfClass:[UIViewController class]]) {
-        self.navigationController = currentController.navigationController;
+        if (currentController.navigationController) {
+            self.navigationController = currentController.navigationController;
+        } else {
+            self.navigationController = [[UINavigationController alloc] init];
+        }
     } else if ([currentController isKindOfClass:[UINavigationController class]]) {
         self.navigationController = (UINavigationController *)currentController;
     } else {
