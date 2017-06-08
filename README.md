@@ -89,8 +89,9 @@ Routable-ReverseValue是基于Routable框架添加了几个新的功能。
 
 2. 逆向传值
 
-添加了NSObject+ReverseValue分类，然后在该分类中添加遵守JCReverseValueProtocol协议的属性，只要*#import "Routable.h"*即可。
+    添加了NSObject+ReverseValue分类，然后在该分类中添加遵守JCReverseValueProtocol协议的属性，只要*#import "Routable.h"*即可。
 
+    ```
     // ViewController1
     [[Routable sharedRouter] open:@"ViewController2"
                          animated:YES
@@ -101,11 +102,12 @@ Routable-ReverseValue是基于Routable框架添加了几个新的功能。
     - (void)jc_reverseValue:(id)value {
         NSLog(@"%s:%@", __FUNCTION__, value);
     }
+    ```
 
-
+    ```
     // ViewController2
     if ([self.JCReverseValueDelegate respondsToSelector:@selector(jc_reverseValue:)]) {
         [self.JCReverseValueDelegate jc_reverseValue:@"come from ViewController2"];
     }
-
+    ```
 
