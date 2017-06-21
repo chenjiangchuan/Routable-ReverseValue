@@ -377,4 +377,13 @@ typedef void (^RouterOpenCallback)(NSDictionary *params);
  */
 + (instancetype)newRouter;
 
+/**
+ *  @author chenjiangchuan, 2017-06-21 15:06
+ *
+ *  注销/被挤下线
+ *
+ *  @param loginViewController 登录界面控制的类名
+ */
++ (void)unRegisterAccountToLoginViewController:(NSString *)loginViewController;
+
 @end

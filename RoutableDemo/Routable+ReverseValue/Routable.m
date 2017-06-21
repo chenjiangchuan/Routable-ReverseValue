@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 #import "Routable.h"
+#import "UIViewController+UnRegister.h"
 
 @implementation Routable
 
@@ -39,6 +40,10 @@
 //really unnecessary; kept for backward compatibility.
 + (instancetype)newRouter {
   return [[self alloc] init];
+}
+
++ (void)unRegisterAccountToLoginViewController:(NSString *)loginViewController {
+    [UIViewController unRegisterAccountToLoginViewController:loginViewController];
 }
 
 @end
