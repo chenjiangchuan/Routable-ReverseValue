@@ -113,3 +113,10 @@ Routable-ReverseValue是基于Routable框架添加了几个新的功能。
     }
     ```
 
+3. 用户注销返回登录界面
+
+    ```
+    // 参数为登录界面控制器的类名
+    [Routable unRegisterAccountToLoginViewController:@"LoginViewController"];
+    ```
+
